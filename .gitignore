@@ -1,0 +1,8 @@
+deps
+ebin
+logs
+*.o
+*.so
+*.beam
+*.plt
+*~
