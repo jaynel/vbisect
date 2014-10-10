@@ -158,8 +158,8 @@ to_orddict(BinDict) ->
     foldr(Fold_Fn, [], BinDict).
 
 
--spec from_gb_tree(gb_tree()) -> bindict().
--spec to_gb_tree  (bindict()) -> gb_tree().
+-spec from_gb_tree(gb_trees:tree()) -> bindict().
+-spec to_gb_tree  (bindict()) -> gb_trees:tree().
 
 from_gb_tree({Num_Entries, Node}) when Num_Entries =< ?MAX_DICT_ENTRIES ->
     {_BinSize, IOList} = encode_gb_node(Node),
