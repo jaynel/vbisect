@@ -13,7 +13,7 @@
 -include_lib("eunit/include/eunit.hrl").
 -endif.
 
--spec from_gb_tree(gb_tree()) -> bindict().
+-spec from_gb_tree(gb_trees:gb_tree()) -> bindict().
 from_gb_tree({Count,Node}) when Count =< 16#ffffffff ->
     {_BinSize,IOList} = encode_gb_node(Node),
     erlang:iolist_to_binary([ <<?MAGIC,  Count:32/unsigned >> | IOList ]).
